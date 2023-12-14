@@ -7,22 +7,22 @@
  */
 void queue(stack_t **stack, unsigned int line_number)
 {
-    stack_t *first, *last;
+	stack_t *first, *last;
 
-    (void)line_number;
+	(void)line_number;
 
-    if (!stack || !*stack || !(*stack)->next)
-        return;
+	if (!stack || !*stack || !(*stack)->next)
+		return;
 
-    first = *stack;
+	first = *stack;
 
-    while (first->next)
-        first = first->next;
+	while (first->next)
+		first = first->next;
 
-    last = first->prev;
-    last->next = NULL;
-    first->prev = NULL;
-    first->next = *stack;
-    (*stack)->prev = first;
-    *stack = first;
+	last = first->prev;
+	last->next = NULL;
+	first->prev = NULL;
+	first->next = *stack;
+	(*stack)->prev = first;
+	*stack = first;
 }
