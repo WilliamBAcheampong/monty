@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <fcntl.h>
 
+char **opcode_tokens = NULL;
 /**
  * main - the entry point for Monty Interp
 * @argv: pointer to an array of char pointers to arguments

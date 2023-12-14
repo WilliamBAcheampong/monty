@@ -38,12 +38,12 @@ char *get_int(int num)
 }
 
 /**
- * __abs - gets the absolute value of an integer
+ * _abs - gets the absolute value of an integer
  * @x: integer to get absolute value of
  *
  * Return: unsigned integer abs rep of i
  */
-unsigned int __abs(int x)
+unsigned int _abs(int x)
 {
 	if (x < 0)
 		return (-(unsigned int)x);
